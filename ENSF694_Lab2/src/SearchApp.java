@@ -29,18 +29,16 @@ public class SearchApp {
 			this.cli.prompt(""); 
 			searchArray[i] = this.cli.getKeyboardInteger();
 		}
+		Arrays.sort(searchArray);
 		
 		this.cli.prompt(" Enter the search key > ");
 		key = this.cli.getKeyboardInteger();
-		
-		System.out.println(numElements); 
-		System.out.println(Arrays.toString(searchArray));
-		System.out.println(key); 
 		
 		//linear search
 		this.cli.display("Using Linear Search:" + "\nArray: " + Arrays.toString(searchArray)+ "\nKey: " + key); 
 	
 		linear = new LinearSearch(key,searchArray); 
+		//Question 2: calculate start and stop time and find the interval for both linear and interpolated 
 		long startTime = System.nanoTime(); 
 		if (linear.searchArrayLinear()) {
 		
@@ -68,8 +66,7 @@ public class SearchApp {
 		
 	}
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		// initializes new BankCDApp object and runs app.
+		// initializes new SearchApp object and runs app.
 		SearchApp app = new SearchApp();
 		app.run();
 	}
