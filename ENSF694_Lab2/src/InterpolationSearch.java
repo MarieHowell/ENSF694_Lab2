@@ -1,4 +1,3 @@
-import java.util.Arrays;
 
 public class InterpolationSearch {
 	private int key; 
@@ -10,7 +9,6 @@ public class InterpolationSearch {
 	}
 	
 	public boolean searchArrayIntpol() {
-		Arrays.sort(array);
 		
 		int low = 0, mid,pos,high = array.length -1; 
 		
