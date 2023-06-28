@@ -1,4 +1,4 @@
-
+// Question 3: Linear search has become faster because it receives a sorted array. 
 public class LinearSearch {
 	private int key; 
 	private int [] array; 
